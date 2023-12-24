@@ -1,0 +1,290 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "DAZN MOVIE APIs",
+    "version": "1.0.11"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Localhost"
+    }
+  ],
+  "tags": [
+    {
+      "name": "movies",
+      "description": "movies API"
+    }
+  ],
+  "paths": {
+    "/movies": {
+      "get": {
+        "tags": ["movies"],
+        "summary": "Get All Movies",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "example": {
+                  "data": [
+                    {
+                      "_id": "657fc03152195f4c08f2d1e4",
+                      "title": "Beetlejuice",
+                      "genres": ["Comedy", "Fantasy"]
+                    },
+                    {
+                      "_id": "657fc03152195f4c08f2d1e5",
+                      "title": "The Cotton Club",
+                      "genres": ["Crime", "Drama", "Music"]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {}
+          }
+        }
+      },
+      "post": {
+        "tags": ["movies"],
+        "summary": "Add Movie",
+        "requestBody": {
+          "description": "movie Data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/movies"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "example": {
+                  "data": {
+                    "title": "Terminator",
+                    "genres": ["Action"],
+                    "rating": 10,
+                    "streamingLinks": ["https://netflix.com/terminator"],
+                    "_id": "6587e235df01d2b71e93f52e"
+                  },
+                  "message": "created"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {}
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {}
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {}
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      }
+    },
+    "/movies/{id}": {
+      "put": {
+        "tags": ["movies"],
+        "summary": "Update Movie By Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "movie Id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "movie Data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/movies"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "example": {
+                  "data": {
+                    "title": "Terminator",
+                    "genres": ["Action"],
+                    "rating": 10,
+                    "streamingLinks": ["https://netflix.com/terminator"],
+                    "_id": "6587e235df01d2b71e93f52e"
+                  },
+                  "message": "created"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {}
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {}
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {}
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      },
+      "delete": {
+        "tags": ["movies"],
+        "summary": "Delete Movie By Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "movie Id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "example": { "message": "deleted" }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {}
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "tags": ["movies"],
+        "summary": "Search movie by title or genre",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "title or genre",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Comedy"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "example": {
+                  "data": [
+                    {
+                      "_id": "657fc03152195f4c08f2d1e9",
+                      "title": "Ratatouille",
+                      "genres": ["Animation", "Comedy", "Family"]
+                    },
+                    {
+                      "_id": "657fc03152195f4c08f2d1e7",
+                      "title": "Crocodile Dundee",
+                      "genres": ["Adventure", "Comedy"]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {}
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "movies": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "movie title",
+            "example": "Terminator"
+          },
+          "genres": {
+            "type": "array",
+            "description": "movie genre",
+            "items": {
+              "type": "string",
+              "example": "Action"
+            }
+          },
+          "rating": {
+            "type": "integer",
+            "description": "movie rating"
+          },
+          "streamingLinks": {
+            "type": "array",
+            "description": "streaming links",
+            "items": {
+              "type": "string",
+              "example": "https://netflix.com/terminator"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-original-swagger-version": "2.0"
+}

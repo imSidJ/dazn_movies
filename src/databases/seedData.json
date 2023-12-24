@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "Beetlejuice",
+    "genres": ["Comedy", "Fantasy"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 2,
+    "title": "The Cotton Club",
+    "genres": ["Crime", "Drama", "Music"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 3,
+    "title": "The Shawshank Redemption",
+    "genres": ["Crime", "Drama"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 4,
+    "title": "Crocodile Dundee",
+    "genres": ["Adventure", "Comedy"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 5,
+    "title": "Valkyrie",
+    "genres": ["Drama", "History", "Thriller"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 6,
+    "title": "Ratatouille",
+    "genres": ["Animation", "Comedy", "Family"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 7,
+    "title": "City of God",
+    "genres": ["Crime", "Drama"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 8,
+    "title": "Memento",
+    "genres": ["Mystery", "Thriller"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 9,
+    "title": "The Intouchables",
+    "genres": ["Biography", "Comedy", "Drama"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 10,
+    "title": "Stardust",
+    "genres": ["Adventure", "Family", "Fantasy"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 11,
+    "title": "Apocalypto",
+    "genres": ["Action", "Adventure", "Drama"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 12,
+    "title": "Taxi Driver",
+    "genres": ["Crime", "Drama"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 13,
+    "title": "No Country for Old Men",
+    "genres": ["Crime", "Drama", "Thriller"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 14,
+    "title": "Planet 51",
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 15,
+    "title": "Looper",
+    "genres": ["Action", "Crime", "Drama"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 16,
+    "title": "Corpse Bride",
+    "genres": ["Animation", "Drama", "Family"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 17,
+    "title": "The Third Man",
+    "genres": ["Film-Noir", "Mystery", "Thriller"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 18,
+    "title": "The Beach",
+    "genres": ["Adventure", "Drama", "Romance"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 19,
+    "title": "Scarface",
+    "genres": ["Crime", "Drama"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 20,
+    "title": "Sid and Nancy",
+    "genres": ["Biography", "Drama", "Music"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 21,
+    "title": "Black Swan",
+    "genres": ["Drama", "Thriller"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 22,
+    "title": "Inception",
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 23,
+    "title": "The Deer Hunter",
+    "genres": ["Drama", "War"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 24,
+    "title": "Chasing Amy",
+    "genres": ["Comedy", "Drama", "Romance"],
+    "streamingLinks": ["netflix.com"]
+  },
+  {
+    "id": 25,
+    "title": "Django Unchained",
+    "genres": ["Drama", "Western"],
+    "streamingLinks": ["netflix.com"]
+  }
+]
